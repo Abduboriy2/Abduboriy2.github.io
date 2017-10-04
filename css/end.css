@@ -1,0 +1,38 @@
+@import url(//fonts.googleapis.com/css?family=Yellowtail);
+body {
+  background-color: black;
+  background-image:
+    url(https://css-tricks.com/examples/StarryNightMoving/images/foreground.png),
+    url(https://css-tricks.com/examples/StarryNightMoving/images/background.png);
+  background-size: 500px, 300px;
+  animation: linear sky 100s infinite;
+}
+div {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  background: black;
+  border-radius: 50%;
+  animation: linear moon 18s infinite;
+}
+
+@keyframes moon {
+  0% {
+    box-shadow: -220px 0px 0 -1px #eee, -220px 0 40px #999;
+    transform: translateX(220px);
+  }
+  100% {
+    box-shadow: 220px 0px 0 -1px #eee, 220px 0 40px #999;
+    transform: translateX(-220px);
+  }
+}
+@keyframes sky {
+  0% { background-position: 0 0, 900px 0; }
+  100% { background-position: 200px -20px, 200px 20px; }
+}
+.slogan {
+    text-align: center;
+    font: 150px/100px 'Yellowtail', cursive;
+    color: #e7e6d4;
+    padding-bottom: 113px;
+}
